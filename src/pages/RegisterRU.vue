@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container container_forms">
-      <!-- <img src="./assets/notes.png" alt="logo" /> -->
+      <img src="./assets/notes.png" alt="logo" />
       <form action="" name="register" class="form_container">
         <input
           type="text"
