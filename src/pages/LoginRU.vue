@@ -31,10 +31,10 @@ export default {
   name: "LoginRU",
   data: function () {
     return {
-      userName: String,
-      password: String,
+      userName: "",
+      password: "",
       users: [],
-      user: Object,
+      user: {},
     };
   },
 

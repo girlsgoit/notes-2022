@@ -11,10 +11,10 @@ export default {
   name: "LoginRO",
   data: function () {
     return {
-      userName: String,
-      password: String,
+      userName: "",
+      password: "",
       users: [],
-      user: Object,
+      user: {},
     };
   },
 
