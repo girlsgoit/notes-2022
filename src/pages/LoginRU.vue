@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container container_forms">
-      <!-- <img src="./assets/notes.png" alt="" /> -->
+      <img src="../assets/notes.png" alt="" />
       <form action="" name="log_in" class="form_container">
         <input
           type="text"
@@ -74,7 +74,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 body {
   padding: 0;
   margin: 0;
