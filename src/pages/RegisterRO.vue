@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container container_forms">
-      <img src="./src/assets/notes.png" alt="logo" /> 
+      <img src="../assets/notes.png" alt="logo" />
       <form action="" name="register" class="form_container">
         <input
           type="text"
@@ -92,66 +92,65 @@ export default {
 
 <style scoped>
 body {
-  font-family: "Roboto", sans-serif, Lobster;
-  background-color: #f2f2f2;
-  color: white;
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  height: 100vh;
+  background-color: #eff3f6;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: 125px;
-}
-.register {
+  flex-direction: column;
   text-align: center;
-  max-width: 400px;
-  border-radius: 20px;
-  border: 1.5px solid #4567ff;
-  background: white;
-  box-sizing: border-box;
-  padding: 30px;
-  box-shadow: 5px 10px #bccacc;
 }
-.register h2 {
-  font-family: Lobster;
-  text-align: center;
-  color: #1b81e0;
-  font-size: 40px;
+
+.container {
+  background-color: #fff;
+  width: 352px;
+  height: 473px;
 }
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  margin: 7px auto;
-  box-sizing: border-box;
-  border-radius: 15px;
-  padding: 12px 5px;
-  outline: none;
-  border: 1px solid #666666;
-  color: black;
+
+.container > img {
+  margin: 25px 0px 9.5px 0px;
 }
-.register-button {
-  display: inline-block;
-  font-size: 17px;
-  padding: 10px;
+
+form > input {
+  margin: 9.5px 0px 9.5px 0px;
+  padding-left: 21px;
+  width: 270px;
+  height: 54px;
+  border: solid 1px #dfdfdf;
+  border-radius: 5px;
+  /* color: #a9a9a9; */
+}
+
+.buttons {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
   margin-top: 20px;
-  margin-left: 45px;
-  text-decoration: none;
-  outline: none;
-  border: none;
-  border-radius: 3px;
-  background-color: #1b81e0;
-  color: white;
-  transition: 0.7s;
 }
-.login-button {
-  display: inline-block;
-  font-size: 17px;
-  padding: 10px;
-  margin-top: 20px;
-  margin-left: 45px;
-  margin-right: 30px;
-  text-decoration: none;
-  outline: none;
+
+.buttons > button {
+  text-transform: uppercase;
+  background-color: #2ea1f8;
   border: none;
-  border-radius: 4px;
-  color: #2876bf;
-  transition: 0.5s;
+  border-radius: 5px;
+  color: #fff;
+  padding: 12px 16px 11px 17px;
+  width: 140px;
+}
+
+.buttons > a {
+  color: #278df6;
+  font-size: 13px;
 }
 </style>
