@@ -1,9 +1,9 @@
 <template>
   <HeaderRO />
   <div>NoteRO</div>
-  <NoteCardList >
-      <NoteCard/>
-   </NoteCardList >
+  <NoteCardList>
+    <NoteCard />
+  </NoteCardList>
   <DeleteButtonRO />
   <FooterRO />
 </template>
@@ -20,5 +20,5 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
 </style>
