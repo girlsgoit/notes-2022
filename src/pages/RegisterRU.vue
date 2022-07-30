@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container container_forms">
-      <!-- <img src="./assets/notes.png" alt="logo" /> -->
+      <img src="../assets/notes.png" alt="logo" />
       <form action="" name="register" class="form_container">
         <input
           type="text"
@@ -32,7 +32,7 @@
           <button name="register" type="submit" @click="startRegister()">
             Регистрация
           </button>
-          <a href="#">Вход</a>
+          <a href="#/ru/login">Вход</a>
         </div>
       </form>
     </div>
@@ -42,15 +42,15 @@
 <script>
 import axios from "axios";
 export default {
-  name: "LoginRO",
+  name: "RegisterRU",
   data: function () {
     return {
-      username: String,
-      fullname: String,
-      password: String,
-      confirmpassword: String,
+      username: "",
+      fullname: "",
+      password: "",
+      confirmpassword: "",
       users: [],
-      user: Object,
+      user: {},
     };
   },
 
@@ -92,7 +92,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 body {
   padding: 0;
   margin: 0;
