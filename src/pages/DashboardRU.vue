@@ -1,5 +1,5 @@
 <template>
-  <HeaderRU />
+  <HeaderRU @change-lang="$router.push('/ro/dashboard')" />
   <DashboardBarRU />
   <div>Dashboard RU</div>
   <NoteList>
