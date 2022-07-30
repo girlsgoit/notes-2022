@@ -25,11 +25,15 @@
           type="password"
           name="confirmPassword"
           placeholder="Repetă parola"
-          v-model="confirmpass"
+          v-model="confirmpassword"
         />
         <br />
         <div class="buttons">
-          <button name="register" type="submit" @click="startRegister()">
+          <button
+            name="register"
+            type="submit"
+            @click.prevent="startRegister()"
+          >
             Înregistrare
           </button>
           <a href="#/ro/login">Logare</a>
@@ -41,56 +45,71 @@
 
 <script>
 import axios from "axios";
+
 export default {
   name: "RegisterRO",
   data: function () {
     return {
-      username: String,
-      fullname: String,
-      password: String,
-      confirmpassword: String,
+      username: "",
+      fullname: "",
+      password: "",
+      confirmpassword: "",
       users: [],
-      user: Object,
+      user: {},
     };
   },
 
   methods: {
-    startRegister() {
+    async startRegister() {
       if (
-        this.username == "" ||
-        this.fullname == "" ||
-        this.password == "" ||
-        this.confirmpassword == ""
+        this.username === "" ||
+        this.fullname === "" ||
+        this.password === "" ||
+        this.confirmpassword === ""
       ) {
         alert("Completați toate golurile!");
+        return;
       } else if (this.confirmpassword !== this.password) {
         alert("Parolele nu se potrivesc!");
-      }
-    },
-    async register() {
-      const profile = await axios.get("api");
-      this.users = profile.data;
-      const isFound = this.users.some((element) => {
-        if (element.username === this.username) {
-          this.user = element;
-          return true;
-        }
-        return false;
-      });
-      if (isFound) {
-        alert("Acest utilizator exista deja!");
+        return;
       } else {
-        const data = { username: this.username, password: this.password };
-        const newuser = await axios.post(/*va fi api,*/ data);
-        this.users.push(data);
-        this.$router.push(`/ro/note/${this.user.id}`);
+        const data = {
+          username: this.username,
+          password: this.password,
+          first_name: this.fullname,
+        };
+        const login_data = {
+          username: this.username,
+          password: this.password,
+        };
+        console.log(data);
+        try {
+          const profile = await axios.post(
+            "https://notes-api.girlsgoit.org/register/",
+            data
+          );
+          const login_response = await axios.post(
+            "https://notes-api.girlsgoit.org/login/",
+            login_data
+          );
+          console.log(profile);
+          console.log(login_response);
+          window.localStorage.setItem(
+            "notes-user-key",
+            login_response.data.token
+          );
+          this.$router.push("/ro/dashboard");
+        } catch (e) {
+          console.error(e);
+          alert("Utilizatorul deja exista");
+        }
       }
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
 body {
   padding: 0;
   margin: 0;
