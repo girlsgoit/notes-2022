@@ -5,7 +5,7 @@
         <a href="#" @click="goToLogin($event)"><span> LOGARE </span></a>
       </div>
       <div class="LOGO">
-        <a href="#"><img src="../assets/logo.svg" alt="image" /></a>
+        <a href="#"><img src="/assets/logo.svg" alt="image" /></a>
       </div>
       <div class="MENU">
         <nav>

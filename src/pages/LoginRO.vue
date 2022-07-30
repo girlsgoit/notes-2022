@@ -1,6 +1,6 @@
 <template>
   <div class="logare">
-    <img src="../assets/logo.svg" />
+    <img src="/assets/logo.svg" />
     <input
       type="text"
       placeholder="Nume de utilizator"
