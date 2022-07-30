@@ -37,6 +37,14 @@ export default {
 </script>
 
 <style>
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0 10px;
+}
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
