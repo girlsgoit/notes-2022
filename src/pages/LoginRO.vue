@@ -1,18 +1,20 @@
 <template>
-  <div class="logare">
-    <img src="/assets/logo.svg" />
-    <input
-      type="text"
-      placeholder="Nume de utilizator"
-      v-model="userName"
-      required
-    />
-    <input type="password" placeholder="Parola" v-model="password" required />
-    <a class="login-button" href="#" @click.prevent="startLogin()">Logare</a>
-    <a class="register-button" href="#" @click.prevent="goToRegistration()"
-      >Înregistrare</a
-    >
-  </div>
+  <body>
+    <div class="logare">
+      <img src="/assets/logo.svg" />
+      <input
+        type="text"
+        placeholder="Nume de utilizator"
+        v-model="userName"
+        required
+      />
+      <input type="password" placeholder="Parola" v-model="password" required />
+      <a class="login-button" href="#" @click="startLogin()">Logare</a>
+      <a class="register-button" href="#" @click="goToRegistration()"
+        >Înregistrare</a
+      >
+    </div>
+  </body>
 </template>
 
 <script>
@@ -25,49 +27,46 @@ export default {
       password: "",
       users: [],
       user: {},
-      response: {},
     };
   },
 
   methods: {
-    startLogin: async function () {
-      if (this.userName === "" && this.password === "") {
-        alert("Completați numele de utilizator și parola!");
-      } else if (this.userName === "" && this.password !== "") {
-        alert("Completați numele de utilizator!");
-      } else if (this.userName !== "" && this.password === "") {
+    async startLogin() {
+      if (this.userName == "" && this.password == "") {
+        alert("Completați login-ul și parola!");
+      } else if (this.userName == "" && this.password !== "") {
+        alert("Completați login-ul!");
+      } else if (this.userName !== "" && this.password == "") {
         alert("Completați parola!");
       } else {
-        const data = {
-          username: this.userName,
-          password: this.password,
-        };
-        console.log(data);
-        await this.getInfo(data);
+        const profile = await axios.get("api");
+        this.users = profile.data;
+        const isFound = this.users.some((element) => {
+          if (element.username === this.userName) {
+            this.user = element;
+            return true;
+          }
+          return false;
+        });
+        if (isFound) {
+          if (this.user.password === this.password) {
+            this.$router.push(`/ro/note/${this.user.id}`);
+          } else {
+            alert("Parolă greșită!");
+          }
+        } else {
+          alert("User-ul nu există! Vă puteți înregistra.");
+        }
       }
     },
-    getInfo(dataExample) {
-      const that = this;
-      axios
-        .post("https://notes-api.girlsgoit.org/login/", dataExample)
-        .then(function (response) {
-          console.log(response);
-          window.localStorage.setItem("notes-user-key", response.data.token);
-          that.$router.push("/ro/dashboard");
-        })
-        .catch((error) => {
-          alert("Utilizatorul nu este găsit. Vă puteți înregistra!");
-          console.log(error.message);
-        });
-    },
-    goToRegistration() {
-      this.$router.push("/ro/register");
+    async goToRegistration() {
+      this.$router.push(`/ro/register`);
     },
   },
 };
 </script>
 
-<style scope>
+<style>
 body {
   font-family: "Roboto", sans-serif, Lobster;
   background-color: #f2f2f2;
@@ -79,11 +78,13 @@ body {
 
 .logare {
   text-align: center;
-  max-width: 360px;
-  border-radius: 5px;
+  max-width: 370px;
+  border-radius: 20px;
+  border: 1.5px solid #4567ff;
   background: white;
   box-sizing: border-box;
   padding: 30px;
+  box-shadow: 5px 10px #bccacc;
 }
 .logare h2 {
   font-family: Lobster;
@@ -96,10 +97,10 @@ input[type="password"] {
   width: 90%;
   margin: 7px auto;
   box-sizing: border-box;
-  border-radius: 5px;
+  border-radius: 15px;
   padding: 12px 5px;
   outline: none;
-  border: 1px solid #dfdfdf;
+  border: 1px solid #666666;
   color: black;
 }
 .login-button {
@@ -111,7 +112,7 @@ input[type="password"] {
   text-decoration: none;
   outline: none;
   border: none;
-  border-radius: 4px;
+  border-radius: 3px;
   background-color: #1b81e0;
   color: white;
   transition: 0.7s;

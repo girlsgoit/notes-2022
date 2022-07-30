@@ -1,5 +1,8 @@
 <template>
-  <HeaderRO @change-lang="$router.push('/ru/dashboard')" />
+  <HeaderRO
+    @change-lang="$router.push('/ru/dashboard')"
+    @sign-out="$router.push('/ro')"
+  />
   <DashboardBarRO />
   <div>Dashboard RO</div>
   <NoteList>

@@ -3,7 +3,7 @@
     <div class="header-section">
       <div class="USERNAME">
         <a href="#">
-          <span>{{ user }}</span>
+          <span> {{ userName }} </span>
         </a>
       </div>
       <div class="LOGO">
@@ -19,7 +19,7 @@
             </li>
             <li class="menu_item2"><a href="#">AJUTOR</a></li>
             <li class="menu_item3">
-              <a href="#" @click="signOut()">DELOGARE</a>
+              <a href="#" @click="signOut($event)">DELOGARE</a>
             </li>
           </ul>
         </nav>
@@ -40,6 +40,9 @@ export default {
       event.preventDefault();
       this.$emit("sign-out");
     },
+  },
+  props: {
+    userName: String,
   },
 };
 </script>
