@@ -1,194 +1,196 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-.quote-image {
-  position: absolute;
-  width: 780px;
-  height: 74px;
-  left: 250px;
-  top: 191px;
+.card h1,
+.card h2,
+.card h3,
+.card h4,
+.card ul,
+.card p,
+.card a {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+}
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 960px;
+  align-items: center;
 }
 
-#newnote {
+.dashboard-text h1 {
+  font-family: Roboto, sans-serif;
+  font-size: 56px;
+  font-weight: 300;
+  margin-right: 450px;
+}
+
+.dashboard-button {
+  max-height: 4rem;
+  font-size: 15px;
+  text-align: center;
+  line-height: 15px;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: white;
+  background-color: #2ea1f8;
+  padding: 21px 28px;
+  border-radius: 5px;
+  position: relative;
+  border: 0px;
+  cursor: pointer;
+}
+.newnote {
   position: absolute;
   width: 144px;
   height: 57px;
   left: 1046px;
   top: 199px;
+  background: #2ea1f8;
   border-radius: 5px;
-  background-color: #2ea1f8;
-  color: white;
-  border: #2ea1f8;
 }
 
-.P1 {
-  position: relative;
-  padding: 0px 0px 20px 0px;
-  border-radius: 10px;
-  width: 400px;
-  background: #ffffff;
-  box-shadow: 0px 2px 27px rgba(230, 230, 230, 0.501961);
-  border-radius: 10px;
+.cards {
+  padding: 30px 0 30px 0;
+}
+
+.cards-container {
+  max-width: 960px;
   display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  position: relative;
-  left: 250px;
-  top: 315px;
-  right: 730px;
-  bottom: 1768px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-p1 {
-  font-size: 16px;
-  color: #393939;
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
+.card ul {
+  padding-left: 17px;
+}
+
+.card li {
+  line-height: 40px;
+}
+
+.card a {
   line-height: 30px;
-}
-
-.container {
-  padding: 0px 0px 20px 0px;
-  width: 460px;
-  background: #ffffff;
-  box-shadow: 0px 2px 27px rgba(230, 230, 230, 0.501961);
-  border-radius: 10px;
-  border: 8px;
-}
-img {
-  border-radius: 10px 10px 0px 0px;
-}
-.Box1 {
-  font-size: 460px 170px;
-}
-span {
-  font-family: "Roboto";
-  color: #919191;
-  font-size: 16px;
-  line-height: 30px;
-  font-weight: 400;
-  position: relative;
-  height: 30px;
-  left: 73.04%;
-  right: 6.52%;
-  top: calc(50% - 30px / 2 + 151px);
-}
-
-h1 {
-  color: #393939;
-  font-family: "Roboto";
-  font-size: 40px;
-  line-height: 30px;
-  font-weight: 400;
-  height: 30px;
-  width: 342px;
-  right: 250;
-  left: 730;
-  top: 315;
-  bottom: 1956;
-  text-align: center;
-}
-.box-inima {
-  padding: 0px 0px 10px 0px;
-  width: 460px;
-  background: #ffffff;
-  box-shadow: 0px 2px 27px rgba(230, 230, 230, 0.501961);
-  border-radius: 10px;
-  border: 8px;
-  padding-top: 30px;
-  position: absolute;
-}
-
-.P5 {
-  position: relative;
-  padding: 0px 0px 20px 0px;
-  border-radius: 10px;
-  width: 320px;
-  background: #ffffff;
-  box-shadow: 0px 2px 27px rgba(230, 230, 230, 0.501961);
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  top: 1113px;
-  right: 250px;
-  left: 730px;
-  bottom: 970px;
-}
-.lista {
-  position: relative;
-  padding: 0px 0px 20px 0px;
-  border-radius: 10px;
-  width: 400px;
-  background: #ffffff;
-  box-shadow: 0px 2px 27px rgba(230, 230, 230, 0.501961);
-  border-radius: 10px;
-  display: inline-block;
-  justify-content: space-evenly;
-  flex-direction: row;
-  color: #393939;
-  font-family: "Roboto";
-  list-style-type: square;
-  top: 694px;
-  right: 730px;
-  left: 250px;
-  bottom: 1270px;
-}
-
-h2 {
-  color: #393939;
-  font-family: "Roboto";
-  font-size: 40px;
-  line-height: 30px;
-  font-weight: 400;
-  height: 30px;
-  width: 342px;
-  left: 40px;
-  top: 10px;
-  text-align: center;
-}
-.box-inima2 {
-  padding: 0px 0px 10px 0px;
-  width: 460px;
-  background: #ffffff;
-  box-shadow: 0px 2px 27px rgba(230, 230, 230, 0.501961);
-  border-radius: 10px;
-  border: 8px;
-  padding-top: 30px;
-}
-
-h3 {
-  color: #393939;
-  font-family: "Roboto";
-  font-size: 40px;
-  line-height: 30px;
-  font-weight: 400;
-  height: 30px;
-  width: 342px;
-  left: 40px;
-  top: 10px;
-  text-align: center;
-}
-.inimabox3 {
-  padding: 0px 0px 10px 0px;
-  width: 460px;
-  background: #ffffff;
-  box-shadow: 0px 2px 27px rgba(230, 230, 230, 0.501961);
-  border-radius: 10px;
-  border: 8px;
-  padding-top: 30px;
-}
-.css {
   color: #278df6;
+  text-decoration: none;
   font-size: 36px;
-  text-align: center;
 }
-.css-avansat {
-  padding: 0px 0px 10px 0px;
-  width: 460px;
-  background: #ffffff;
-  box-shadow: 0px 2px 27px rgba(230, 230, 230, 0.501961);
+
+.cards .column {
+  width: 50%;
+}
+
+.card {
+  position: relative;
+  box-shadow: 0px 2px 27px rgba(230, 230, 230, 0.5);
   border-radius: 10px;
-  border: 8px;
+  color: #393939;
+  font-family: Georgia;
+  text-align: left;
+  padding: 30px;
+  transition: box-shadow 0.25s ease;
+  display: block;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.card-delete {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.card-delete:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.note-delete {
+  border: 1px solid orangered;
+  width: 25px;
+  height: 25px;
+  border-radius: 15px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: orangered;
+  background-color: white;
+  box-shadow: 0 0 0 1px white;
+  font-size: 20px;
+
+  transform: scale(1.05); /* fixat o miscarea lui x un pic la hover. */
+  transition: transform 0.3s ease;
+
+  cursor: pointer;
+}
+
+.note-delete:hover {
+  transform: scale(1.2);
+}
+
+.card.card-image {
+  object-fit: cover;
+  padding: 0;
+}
+
+.card.card-image img {
+  width: 100%;
+}
+
+.card .notes-data {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  text-align: right;
+  margin: 0;
   padding-top: 30px;
+  color: #919191;
+}
+
+.card.card-image .notes-data {
+  padding: 30px;
+}
+.card h4 {
+  line-height: 30px;
+  font-size: 16px;
+}
+.card h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+.card p {
+  font-size: 16px;
+  line-height: 30px;
+}
+.card h2 {
+  font-size: 28px;
+  line-height: 30px;
+}
+.card h1 {
+  line-height: 1.1;
+  font-size: 36px;
+}
+
+@media screen and (max-width: 600px) {
+  .cards-container {
+    flex-direction: column;
+  }
+
+  .cards .column {
+    width: 100%;
+  }
 }
