@@ -8,7 +8,7 @@
       </div>
       <div class="LOGO">
         <a href="#">
-          <img src="../assets/notes.png" alt="image" />
+          <img src="../assets/logo.svg" alt="image" />
         </a>
       </div>
       <div class="MENU">
