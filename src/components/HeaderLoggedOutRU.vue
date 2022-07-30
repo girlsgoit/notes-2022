@@ -3,18 +3,18 @@
     <nav>
       <ul id="firstNavList">
         <li>
-          <a class="NavLinkAnchor" href="#" @click="goToLogin()">ВХОД+</a>
+          <a class="NavLinkAnchor" href="#" @click="goToLogin($event)">ВХОД</a>
         </li>
       </ul>
 
-      <img src="img/logoPr.png" alt="logo1" id="logoIMG" />
+      <img src="../assets/notes.png" alt="logo1" id="logoIMG" />
 
       <ul id="secondNavList">
         <li>
           <a class="NavLinkAnchor" href="#" @click="changeLang($event)">РО</a>
         </li>
         <li>
-          <a class="NavLinkAnchor" href="#" @click="goToRegister()"
+          <a class="NavLinkAnchor" href="#" @click="goToRegister($event)"
             >РЕГИСТРАЦИЯ</a
           >
         </li>
@@ -34,10 +34,12 @@ export default {
       this.$emit("change-lang");
     },
 
-    goToLogin() {
+    goToLogin(event) {
+      event.preventDefault();
       this.$emit("go-to-login");
     },
-    goToRegister() {
+    goToRegister(event) {
+      event.preventDefault();
       this.$emit("go-to-register");
     },
   },

@@ -1,7 +1,7 @@
 <template>
   <div>{{ user }}</div>
   <a href="#" @click="changeLang($event)">ru</a>
-  <a href="#" @click="signOut()">SIGN OUT</a>
+  <a href="#" @click="signOut($event)">SIGN OUT</a>
   <div>HeaderRO</div>
 </template>
 

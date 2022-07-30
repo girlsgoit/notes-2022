@@ -1,8 +1,8 @@
 <template>
   <HeaderLoggedOutRU
     @change-lang="$router.push('/ro')"
-    @go-to-login="$router.push('/linkloginru')"
-    @go-to-register="$router.push('/linkregisterru')"
+    @go-to-login="$router.push('/ru/login')"
+    @go-to-register="$router.push('/ru/register')"
   />
   <h1>Privet!</h1>
   <FooterRU />

@@ -1,8 +1,8 @@
 <template>
   <div>HEADER RO!</div>
-  <a href="#" @click="goToLogin()">LOGIN</a>
+  <a href="#" @click="goToLogin($event)">LOGIN</a>
   <a href="#" @click="changeLang($event)">ru</a>
-  <a href="#" @click="goToRegister()">REGISTER</a>
+  <a href="#" @click="goToRegister($event)">REGISTER</a>
 
   <hr />
 </template>
@@ -16,10 +16,12 @@ export default {
       this.$emit("change-lang");
     },
 
-    goToLogin() {
+    goToLogin(event) {
+      event.preventDefault();
       this.$emit("go-to-login");
     },
-    goToRegister() {
+    goToRegister(event) {
+      event.preventDefault();
       this.$emit("go-to-register");
     },
   },
