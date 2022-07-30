@@ -11,7 +11,7 @@
 
       <ul id="secondNavList">
         <li>
-          <a class="NavLinkAnchor" href="#" @click="changeLang($event)"> RU</a>
+          <a class="NavLinkAnchor" href="#" @click="changeLang($event)">RO</a>
         </li>
         <li><a class="NavLinkAnchor" href="#">ПОМОЩЬ</a></li>
         <li><a class="NavLinkAnchor" href="#" @click="signOut()">ВЫХОД</a></li>

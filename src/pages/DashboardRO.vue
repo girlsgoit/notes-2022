@@ -1,13 +1,13 @@
 <template>
-  <HeaderRO/>
-  <DashboardBarRO/>
+  <HeaderRO @change-lang="$router.push('/ru/dashboard')" />
+  <DashboardBarRO />
   <div>Dashboard RO</div>
   <NoteList>
     <NoteItem />
     <NoteItem />
     <NoteItem />
   </NoteList>
-  <FooterRO/>
+  <FooterRO />
 </template>
 
 <script>

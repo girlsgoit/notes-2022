@@ -1,8 +1,8 @@
 <template>
   <HeaderLoggedOutRO
     @change-lang="$router.push('/ru')"
-    @go-to-login="$router.push('/linkloginro')"
-    @go-to-register="$router.push('/linkregisterro')"
+    @go-to-login="$router.push('/ro/login')"
+    @go-to-register="$router.push('/ro/register')"
   />
   <h1>Salutare!</h1>
   <FooterRO />
