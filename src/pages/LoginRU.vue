@@ -17,8 +17,8 @@
         />
         <br />
         <div class="buttons">
-          <button name="login" type="" @click="startLogin($event)">Вход</button>
-          <a href="#" @click="goToRegistration($event)">Регистрация</a>
+          <button name="login" @click.prevent="startLogin()">Вход</button>
+          <a href="#" @click.prevent="goToRegistration()">Регистрация</a>
         </div>
       </form>
     </div>
@@ -35,46 +35,46 @@ export default {
       password: "",
       users: [],
       user: {},
+      response: {},
     };
   },
 
   methods: {
-    async startLogin(event) {
-      if (this.userName == "" && this.password == "") {
+    startLogin: async function () {
+      if (this.userName === "" && this.password === "") {
         alert("Заполните логин и пароль!");
-      } else if (this.userName == "" && this.password !== "") {
+      } else if (this.userName === "" && this.password !== "") {
         alert("Заполните логин!");
-      } else if (this.userName !== "" && this.password == "") {
+      } else if (this.userName !== "" && this.password === "") {
         alert("Заполните пароль!");
       } else {
-        const profile = await axios.get("api");
-        this.users = profile.data;
-        const isFound = this.users.some((element) => {
-          if (element.username === this.userName) {
-            this.user = element;
-            return true;
-          }
-          return false;
-        });
-        if (isFound) {
-          if (this.user.password === this.password) {
-            this.$router.push(`/ru/note/${this.user.id}`);
-          } else {
-            alert("Неверный пароль!");
-          }
-        } else {
-          alert("Пользователь не найден .Можете зарегистрироваться!");
-        }
+        const data = {
+          username: this.userName,
+          password: this.password,
+        };
+        console.log(data);
+        await this.getInfo(data);
       }
     },
-    async goToRegistration(event) {
-      this.$router.push(`/ru/register`);
+    getInfo(dataExample) {
+      const that = this;
+      axios
+        .post("https://notes-api.girlsgoit.org/login/", dataExample)
+        .then(function (response) {
+          console.log(response);
+          window.localStorage.setItem("notes-user-key", response.data.token);
+          that.$router.push("/ru/dashboard");
+        })
+        .catch((error) => {
+          alert("Пользователь не найден. Можете зарегистрироваться!");
+          console.log(error.message);
+        });
     },
   },
 };
 </script>
 
-<style>
+<style scoped>
 body {
   padding: 0;
   margin: 0;
