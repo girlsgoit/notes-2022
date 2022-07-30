@@ -1,7 +1,7 @@
 <template>
   <section>
     <div class="container container_forms">
-      <img src="../assets/notes.png" alt="" />
+      <img src="../assets/logo.svg" alt="" />
       <form action="" name="log_in" class="form_container">
         <input
           type="text"

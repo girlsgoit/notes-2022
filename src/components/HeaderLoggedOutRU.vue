@@ -7,7 +7,7 @@
         </li>
       </ul>
 
-      <img src="../assets/notes.png" alt="logo1" id="logoIMG" />
+      <img src="../assets/logo.svg" alt="logo1" id="logoIMG" />
 
       <ul id="secondNavList">
         <li>
@@ -48,7 +48,7 @@ export default {
 
 <style>
 body {
-  margin: 0px;
+  margin: 0;
   font-family: "Roboto", sans-serif;
 }
 
