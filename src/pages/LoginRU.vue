@@ -17,8 +17,8 @@
         />
         <br />
         <div class="buttons">
-          <button name="login" type="" @click="startLogin()">Вход</button>
-          <a href="#" @click="goToRegistration()">Регистрация</a>
+          <button name="login" type="" @click="startLogin($event)">Вход</button>
+          <a href="#" @click="goToRegistration($event)">Регистрация</a>
         </div>
       </form>
     </div>
@@ -39,7 +39,7 @@ export default {
   },
 
   methods: {
-    async startLogin() {
+    async startLogin(event) {
       if (this.userName == "" && this.password == "") {
         alert("Заполните логин и пароль!");
       } else if (this.userName == "" && this.password !== "") {
@@ -67,7 +67,7 @@ export default {
         }
       }
     },
-    async goToRegistration() {
+    async goToRegistration(event) {
       this.$router.push(`/ru/register`);
     },
   },

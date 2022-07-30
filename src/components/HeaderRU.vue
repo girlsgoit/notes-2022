@@ -3,15 +3,15 @@
     <nav>
       <ul id="firstNavList">
         <li>
-          <a class="NavLinkAnchor" href="#">{{ user }}</a>
+          <a class="NavLinkAnchor" href="#"> {{ user }} </a>
         </li>
       </ul>
 
-      <img src="img/logoPr.png" alt="logo1" id="logoIMG" />
+      <img src="../assets/logo.svg" alt="logo1" id="logoIMG" />
 
       <ul id="secondNavList">
         <li>
-          <a class="NavLinkAnchor" href="#" @click="changeLang($event)"> RU</a>
+          <a class="NavLinkAnchor" href="#" @click="changeLang($event)">RO</a>
         </li>
         <li><a class="NavLinkAnchor" href="#">ПОМОЩЬ</a></li>
         <li><a class="NavLinkAnchor" href="#" @click="signOut()">ВЫХОД</a></li>
@@ -64,6 +64,7 @@ header {
 }
 #firstNavList {
   text-align: center;
+  list-style: none;
 }
 
 #secondNavList {
@@ -71,6 +72,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   text-align: center;
+  list-style: none;
   gap: 30px;
 }
 

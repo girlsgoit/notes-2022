@@ -1,53 +1,3 @@
-<template>
-  <header>
-    <div class="header-section">
-      <div class="LOGIN">
-        <a href="#" @click="goToLogin($event)"><span> LOGARE </span></a>
-      </div>
-      <div class="LOGO">
-        <a href="#"><img src="../assets/logo.svg" alt="image" /></a>
-      </div>
-      <div class="MENU">
-        <nav>
-          <ul>
-            <li class="menu_item1">
-              <a href="#" @click="changeLang($event)">RU</a>
-            </li>
-            <li class="menu_item2">
-              <a href="#" @click="goToRegister($event)"
-                ><span>ÎNREGISTRARE</span></a
-              >
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
-  <hr />
-</template>
-
-<script>
-export default {
-  name: "HeaderLoggedOutRO",
-  methods: {
-    changeLang(event) {
-      event.preventDefault();
-      this.$emit("change-lang");
-    },
-
-    goToLogin(event) {
-      event.preventDefault();
-      this.$emit("go-to-login");
-    },
-    goToRegister(event) {
-      event.preventDefault();
-      this.$emit("go-to-register");
-    },
-  },
-};
-</script>
-
-<style>
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
 
 body {
@@ -124,4 +74,3 @@ div nav ul li {
     order: 0;
   }
 }
-</style>
