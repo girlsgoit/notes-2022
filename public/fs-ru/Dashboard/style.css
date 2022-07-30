@@ -1,0 +1,125 @@
+
+
+
+   body{
+    font-family: 'Roboto', sans-serif;
+   }
+
+a{
+    text-decoration: none;
+    color: #2EA1F8;
+ }
+
+.wrapper{
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+
+.Dashboard{
+    display: inline;
+    padding: 10px;
+    font-size: 50px ;
+
+}
+
+#buttonnewnote{
+padding: 15px 30px;
+background: #2EA1F8;
+border-radius: 5px;
+border: none;
+text-transform: uppercase;
+color: aliceblue;
+
+
+}
+.newnote{
+    display: flex; 
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 70px 0 50px ;
+}
+
+.data{
+ text-align: right;
+color: grey;    
+}
+.box{
+padding: 30px;
+background: #FFFFFF;
+box-shadow: 10px 10px 10px 10px rgba(230, 230, 230, 0.5);
+border-radius: 10px;
+
+}
+
+
+#section{
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap ;
+    gap: 20px;
+    padding: 20px 0;
+
+}
+
+.column{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1 1 45%;
+}
+
+img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+.doit{
+    font-size:30px;
+}
+#CSS{
+    font-size: 35px;
+    
+}
+
+  /*Adapt*/
+  /* №1 */
+  @media (max-width: 1140px) {
+	
+}
+/* №2 */
+@media (max-width: 991.98px) {
+    .wrapper{
+        max-width: 700px;   
+    }
+    .Dashboard>p{
+    
+        font-size: 45px ;
+    
+    }
+}
+/*№3 */
+@media (max-width: 767.98px) {
+  .box{
+    padding: 15px;
+  }
+  .Dashboard{
+  
+    font-size: 35px ;
+
+}
+}
+
+@media (max-width: 660px) {
+    #section{
+        flex-direction: column ;
+    }
+    .newnote{
+       
+      padding: 50px 0 30px 0;
+    }
+}

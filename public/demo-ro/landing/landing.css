@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  margin: 0;
+}
+
+.notes h1 {
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+.notes p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #6a6a6a;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.project-images ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.project-images ul li {
+  flex-basis: 25%;
+  max-height: 238px;
+  position: relative;
+  list-style-type: none;
+}
+
+.project-images ul li img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  /* background-image: url("images/Bitmap.png"); */
+  /* background-color: black; */
+
+  font-family: "Roboto";
+  font-style: normal;
+}
+.container img {
+  width: 100%;
+}
+
+.container h2 {
+  height: 67px;
+  left: 0%;
+  right: 0%;
+  top: calc(50% - 67px / 2 - 61px);
+  font-size: 56px;
+
+  font-weight: 700;
+  line-height: 68px;
+}
+.container p {
+  font-weight: 300;
+  font-size: 24px;
+  position: relative;
+  display: inline-block;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.features li {
+  list-style-type: none;
+}
+.box1 {
+  text-align: center;
+  flex-wrap: nowrap;
+}
+.box3 {
+  text-align: center;
+  flex-wrap: nowrap;
+}
+.box2 {
+  text-align: center;
+  flex-wrap: nowrap;
+}
+.box img {
+  max-width: auto;
+  max-height: 45px;
+}
+.box {
+  list-style-type: none;
+  display: inline-block;
+  flex-direction: row;
+  max-width: 300px;
+  margin: 21px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.box p {
+  max-width: 200px;
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.7;
+}
+.paragraf h1 {
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  padding-top: 50px;
+}
+.paragraf p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  color: #6a6a6a;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.caracteristici {
+  background-color: #fafafa;
+}
+.features {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 320px) and (max-width: 675px) {
+  .notes p,
+  .caracteristici p {
+    padding: 0 20px;
+  }
+  div.centered h2 {
+    font-size: 0.75rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+  .centered p {
+    font-size: 0.7rem;
+    padding-bottom: 10px;
+  }
+}
+ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+.container img {
+  max-height: 0 auto;
+  max-width: 1890px;
+}

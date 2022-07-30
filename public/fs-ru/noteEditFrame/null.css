@@ -1,0 +1,48 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+  button {
+    cursor: pointer;
+  }
+  .wrapper {
+  width: 100%;
+  }
+
+  /*Adapt*/
+  /* №1 */
+@media (max-width: 1140px) {
+	
+}
+/* №2 */
+@media (max-width: 991.98px) {
+	
+}
+/*№3 */
+@media (max-width: 767.98px) {
+    .wrapper{
+        max-width: 700px;   
+    }
+    
+    .heading{
+        font-size: 46px; 
+    }
+    .buttons{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 560px) {
+    .heading{
+        font-size: 36px; 
+    }
+    .wrapper{ 
+        max-width:none;
+    } 
+}

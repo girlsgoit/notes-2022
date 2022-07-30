@@ -21,7 +21,7 @@ const routesRO = [
   { name: "LoginRO", path: "/ro/login", component: LoginRO },
   { name: "NoteRO", path: "/ro/note/:id", component: NoteRO },
   { name: "NoteEditRO", path: "/ro/note-edit", component: NoteEditRO },
-  { name: "RegisterRO", path: "/ro/register", component: RegisterRO },
+  { name: "RegisterRO", path: "/ro/register", component: RegisterRO }
 ];
 
 const routesRU = [
@@ -30,20 +30,20 @@ const routesRU = [
   { name: "LoginRU", path: "/ru/login", component: LoginRU },
   { name: "NoteRU", path: "/ru/note/:id", component: NoteRU },
   { name: "NoteEditRU", path: "/ru/note-edit", component: NoteEditRU },
-  { name: "RegisterRU", path: "/ru/register", component: RegisterRU },
+  { name: "RegisterRU", path: "/ru/register", component: RegisterRU }
 ];
 
 const routes = [
   {
     path: "/",
     redirect: "/ro",
-    children: [...routesRO, ...routesRU],
-  },
+    children: [...routesRO, ...routesRU]
+  }
 ];
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes: routes,
+  routes: routes
 });
 
 createApp(App).use(router).mount("#app");
