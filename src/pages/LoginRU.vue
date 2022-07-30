@@ -70,6 +70,9 @@ export default {
           console.log(error.message);
         });
     },
+    goToRegistration() {
+      this.$router.push("/ru/register");
+    },
   },
 };
 </script>
