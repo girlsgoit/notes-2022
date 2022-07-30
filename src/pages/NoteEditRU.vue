@@ -1,5 +1,5 @@
 <template>
-  <HeaderRU @change-lang="$router.push('/ru/note edit')" />
+  <HeaderRU @change-lang="$router.push('/ru/note-edit')" />
 </template>
 
 <script>

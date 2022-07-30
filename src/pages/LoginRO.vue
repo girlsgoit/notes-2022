@@ -1,8 +1,8 @@
 <template>
   <input type="text" placeholder="Username" v-model="userName" />
   <input type="password" placeholder="password" v-model="password" />
-  <button @click="startLogin()">Login</button>
-  <button @click="goToRegistration()">Register</button>
+  <button @click="startLogin($event)">Login</button>
+  <button @click="goToRegistration($event)">Register</button>
 </template>
 
 <script>
@@ -19,7 +19,7 @@ export default {
   },
 
   methods: {
-    async startLogin() {
+    async startLogin(event) {
       if (this.userName == "" && this.password == "") {
         alert("Completați login-ul și parola!");
       } else if (this.userName == "" && this.password !== "") {
@@ -47,7 +47,7 @@ export default {
         }
       }
     },
-    async goToRegistration() {
+    async goToRegistration(event) {
       this.$router.push(`/ro/register`);
     },
   },
