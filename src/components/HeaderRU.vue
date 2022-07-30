@@ -3,7 +3,7 @@
     <nav>
       <ul id="firstNavList">
         <li>
-          <a class="NavLinkAnchor" href="#"> {{ user }} </a>
+          <a class="NavLinkAnchor" href="#"> {{ userName }} </a>
         </li>
       </ul>
 
@@ -14,7 +14,9 @@
           <a class="NavLinkAnchor" href="#" @click="changeLang($event)">RO</a>
         </li>
         <li><a class="NavLinkAnchor" href="#">ПОМОЩЬ</a></li>
-        <li><a class="NavLinkAnchor" href="#" @click="signOut()">ВЫХОД</a></li>
+        <li>
+          <a class="NavLinkAnchor" href="#" @click="signOut($event)">ВЫХОД</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -32,6 +34,9 @@ export default {
       event.preventDefault();
       this.$emit("sign-out");
     },
+  },
+  props: {
+    userName: String,
   },
 };
 </script>

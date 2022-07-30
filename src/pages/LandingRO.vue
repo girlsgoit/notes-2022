@@ -4,12 +4,15 @@
     @go-to-login="$router.push('/ro/login')"
     @go-to-register="$router.push('/ro/register')"
   />
-  <h1>Salutare!</h1>
+  <LandingThingsRO />
+  <PartnersRO />
   <FooterRO />
 </template>
 
 <script>
 import HeaderLoggedOutRO from "../components/HeaderLoggedOutRO.vue";
+import PartnersRO from "../components/PartnersRO.vue";
+import LandingThingsRO from "../components/LandingThingsRO.vue";
 import FooterRO from "../components/FooterRO.vue";
 
 export default {
@@ -17,6 +20,8 @@ export default {
   components: {
     HeaderLoggedOutRO,
     FooterRO,
+    PartnersRO,
+    LandingThingsRO,
   },
 };
 </script>

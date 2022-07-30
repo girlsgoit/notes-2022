@@ -1,18 +1,20 @@
 <template>
-  <hr />
-  <footer>
-    <div id="container">
-      <div class="footer-text">
-        Приложение было разработано во время мероприятия
-        <span> Summer Camp 2022 </span>
+  <body>
+    <hr />
+    <footer>
+      <div id="container">
+        <div class="footer-text">
+          Приложение было разработано во время мероприятия
+          <span> Summer Camp 2022 </span>
+        </div>
+        <div class="links">
+          <a href="https://ru-ru.facebook.com/GirlsGoIT/"> Facebook </a>
+          <a href="https://www.youtube.com/c/girlsgoit"> YouTube </a>
+          <a href="https://www.instagram.com/girlsgoit/"> Instagram </a>
+        </div>
       </div>
-      <div class="links">
-        <a href="https://ro-ro.facebook.com/GirlsGoIT/"> Facebook </a>
-        <a href="https://www.youtube.com/c/girlsgoit"> YouTube </a>
-        <a href="https://www.instagram.com/girlsgoit/"> Instagram </a>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </body>
 </template>
 
 <script>

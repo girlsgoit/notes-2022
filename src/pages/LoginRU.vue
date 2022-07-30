@@ -1,28 +1,30 @@
 <template>
-  <section>
-    <div class="container container_forms">
-      <img src="/assets/logo.svg" alt="" />
-      <form action="" name="log_in" class="form_container">
-        <input
-          type="text"
-          name="userName"
-          placeholder="Имя пользователя"
-          v-model="userName"
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Пароль"
-          v-model="password"
-        />
-        <br />
-        <div class="buttons">
-          <button name="login" @click.prevent="startLogin()">Вход</button>
-          <a href="#" @click.prevent="goToRegistration()">Регистрация</a>
-        </div>
-      </form>
-    </div>
-  </section>
+  <body>
+    <section>
+      <div class="container container_forms">
+        <img src="/assets/logo.svg" alt="" />
+        <form action="" name="log_in" class="form_container">
+          <input
+            type="text"
+            name="userName"
+            placeholder="Имя пользователя"
+            v-model="userName"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Пароль"
+            v-model="password"
+          />
+          <br />
+          <div class="buttons">
+            <button name="login" @click.prevent="startLogin()">Вход</button>
+            <a href="#" @click.prevent="goToRegistration()">Регистрация</a>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
 </template>
 
 <script>
@@ -69,9 +71,6 @@ export default {
           alert("Пользователь не найден. Можете зарегистрироваться!");
           console.log(error.message);
         });
-    },
-    goToRegistration() {
-      this.$router.push("/ru/register");
     },
   },
 };
